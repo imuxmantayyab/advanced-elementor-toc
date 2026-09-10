@@ -1,0 +1,77 @@
+/**
+ * Advanced Table of Contents for Elementor - Responsive Stylesheet
+ *
+ * Mobile Drawer, Accordion, Floating Bar, and Touch Optimizations.
+ *
+ * @package AdvancedElementorTOC
+ */
+
+@media (max-width: 1024px) {
+	.aetoc-list-root {
+		columns: 1 !important;
+	}
+}
+
+@media (max-width: 767px) {
+	/* Hide entirely on mobile */
+	.aetoc-hide-mobile {
+		display: none !important;
+	}
+
+	.aetoc-wrapper {
+		padding: 16px;
+		border-radius: 10px;
+	}
+
+	.aetoc-header-title {
+		font-size: 1.05rem;
+	}
+
+	.aetoc-link {
+		font-size: 0.9rem;
+		min-height: 38px;
+		display: flex;
+		align-items: center;
+	}
+
+	/* Bottom Drawer Mode */
+	.aetoc-mobile-bottom_drawer {
+		position: fixed !important;
+		bottom: 0 !important;
+		left: 0 !important;
+		right: 0 !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		margin: 0 !important;
+		border-radius: 16px 16px 0 0 !important;
+		z-index: 99999;
+		box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.15) !important;
+		max-height: 80vh;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.aetoc-mobile-bottom_drawer .aetoc-body {
+		max-height: 60vh;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	/* Floating Bar Mode */
+	.aetoc-mobile-floating_bar {
+		position: fixed !important;
+		bottom: 20px !important;
+		left: 20px !important;
+		right: 20px !important;
+		width: calc(100% - 40px) !important;
+		margin: 0 !important;
+		z-index: 99999;
+		border-radius: 30px !important;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+	}
+
+	/* Multi-columns collapse */
+	.aetoc-list-root {
+		columns: 1 !important;
+	}
+}
